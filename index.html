@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Handin</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="sidebar" class="sticky">
+    <a href="#overview"><p>Overview</p></a>
+    <a href="#analysis"><p>Competitive Analysis</p></a>
+    <a href="#organization"><p>Organization of Components</p></a>
+    <a href="#flow"><p>Flow of Data</p></a>
+    <a href="#final"><p>Final Development</p></a>
+    <!-- <a href="#challenges"><p>Challenges</p></a>-->
+    <a href="#takeaways"><p>Takeaways</p></a> 
+  </div>
+
+  <div class="main">
+    <section>
+      <div class="sm-spacing">
+        <h1>React Development Assignment</h1>
+        <div class="row">
+          <div class="pill"><p>React</p></div>
+          <div class="pill"><p>HTML/CSS</p></div>
+          <div class="pill"><p>frontend development</p></div>
+          <div class="pill"><p>website design</p></div>
+        </div>
+      </div>
+      <img src="images/mockup.png" style="background: #f5f5f5;">
+    </section>
+
+    <section id="overview">
+      <div class="sm-spacing">
+        <h3>Overview</h3>
+        <p>The main objective of this assignment was to gain a stronger sense of frontend development by creating a React application. I created a website with K-pop songs curated by me where users could browse and filter through.</p>
+        <p>This project marks my very first time using React, so there were many technical challenges I faced throughout the project since I also have minimal experience with JavaScript.</p>
+      </div>
+      <div class="col-container">
+        <div class="col">
+          <b>Timeline</b>
+          <p>Mar 2024 - Apr 2024</p>
+          <p>3 weeks</p>
+        </div>
+        <div class="col">
+          <b>Location</b>
+          <p>Providence, RI</p>
+        </div>
+        <div class="col">
+          <b>Tools</b>
+          <p>React</p>
+          <p>HTML/CSS</p>
+          <p>Figma</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="analysis">
+      <div class="sm-spacing">
+        <h3>Competitive Analysis</h3>
+        <p>
+          To start off the project, I analyzed the favoriting function or counterpart of several popular websites across social media, e-commerce, and music listening.
+        </p>
+        <a href="https://www.instagram.com/" target="_blank" class="hyperlink">Instagram ↗</a>
+        <a href="https://www.etsy.com/" target="_blank" class="hyperlink">Etsy ↗</a>
+        <a href="https://www.pinterest.com/" target="_blank" class="hyperlink">Pinterest ↗</a>
+        <a href="https://open.spotify.com/" target="_blank" class="hyperlink">Spotify ↗</a>
+      </div>
+      <p>
+        I then selected 7 features to perform a competitive analysis on. I made sure to select diverse features to analyze in order to gain a more comprehensive understanding of each website. These features covered aspects of functionality, visual design, and accessibility.
+      </p>
+      <table>
+        <tr>
+          <th></th>
+          <th>Instagram</th>
+          <th>Etsy</th>
+          <th>Pinterest</th>
+          <th>Spotify</th>
+        </tr>
+        <tr>
+          <th class="gray">Favorites page layout</th>
+          <td>Standard grid</td>
+          <td>Standard grid</td>
+          <td>Masonry grid</td>
+          <td>List</td>
+        </tr>
+        <tr>
+          <th class="gray">Interaction overview</th>
+          <td>Can like posts</td>
+          <td>Can save items to Favorites and Add to collection</td>
+          <td>Can save pins in different boards and star pins within the board</td>
+          <td>Can add songs to Liked Songs</td>
+        </tr>
+        <tr>
+          <th class="gray">Tooltip</th>
+          <td>✅<br>
+            Like<br>
+            Unlike</td>
+          <td>❌</td>
+          <td>❌<br>
+            Button with “Save” text</td>
+          <td>✅<br>
+            Save to Your Library<br>
+            Remove from Your Library</td>
+        </tr>
+        <tr>
+          <th class="gray">Confirmation message</th>
+          <td>❌</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <th class="gray">Can access favorites from navigation</th>
+          <td>❌<br>
+            More -> Your activity</td>
+          <td>✅</td>
+          <td>❌<br>
+          Your profile</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <th class="gray">Filters</th>
+          <td>✅ By Date<br>
+            Buttons and dropdowns</td>
+          <td>✅ By search<br>
+            Input field</td>
+          <td>✅ By type <br>
+          Can also change viewing options</td>
+          <td>❌ Can only change viewing options</td>
+        </tr>
+        <tr>
+          <th class="gray">Reset filters</th>
+          <td>✅<br>
+            By clicking the Reset button</td>
+          <td>✅<br>
+            By clicking the X in the input field</td>
+          <td>❌<br>
+            Can only filter back to All Pins</td>
+          <td>❌</td>
+        </tr>
+      </table>
+      <p>
+        Since I usually use most of these websites in app form on my phone, it was interesting to see how some of the desktop versions felt much less intuitive.
+      </p>
+      <p>
+        <b>Instagram: </b>I find it misleading that a user cannot access their liked posts directly through the Instagram sidebar, yet the sidebar contains a heart icon paired with the text "Notifications". This becomes even more of an issue when one decreases the screen size and the text disappears, leaving only the heart icon, which we intuitively think refers to "likes".
+      </p>
+      <p>
+        <b>Etsy: </b>I was surprised to discover that overall, Etsy had the most successful favoriting function in the variety of options it offered. Similar to Pinterest, users could save items to either a default Favorites folder or create their own, enabling them to organize their favorited items. Etsy was the only website with a search input field, which makes sense as the only e-commerce website out of the four that needs to handle more complicated filters through seaarch queries.
+      </p>
+      <p>
+        <b>Pinterest: </b>The design of Pinterest was effective since the user can easily organize their pins and also drag and drop UI elements to really customize their boards. However, I found the process for saving a pin and viewing it to be confusing because Pinterest allows the user to save saved pins and also star saved pins within boards. In this case, saving a pin in Pinterest is comparable to adding a song in Spotify to a playlist.
+      </p>
+      <p>
+        <b>Spotify: </b>I noticed some discrepencies between the Spotify website, which I was analyzing, and the Spotify desktop application. In terms of filtering, while the Spotify website does have any filters, the application allows the user to sort by Title, Artist, Album, Date added, and also filter by the "vibes" of the songs. If the same functionality was on the Spotify website, this would be very effective.
+      </p>  
+      <div class="sm-spacing">
+        <p>From a user's standpoint, I found the following elements most helpful during my process of favoriting an item:</p>
+        <ol>
+          <li>Direct access to Favorites through the navigation</li>
+          <li>Confirmation message when user favorites an item</li>  
+          <li>Diverse filtering options</li>
+          <li>Discoverable Reset filters</li>
+        </ol>
+      </div>
+      <p>
+        For my own interface, I wanted to build a music app with popular K-Pop songs I like that were released in the last couple of years. I planned to use <a href="https://open.spotify.com/" target="_blank" class="hyperlink">Spotify ↗</a> as my main source of inspiration for visual design, where there I used a left sidebar and a main right side. In terms of functionality, I wanted to be able to filter each song by artist, release year, and song type. Additionally, I wanted to implement a way for users to favorite and unfavorite songs, which will act as another filter. 
+      </p>
+    </section>
+
+    <section id="organization">
+      <div class="sm-spacing">
+        <h3>Organization of Components</h3>
+        <p>I used the following components to organize my code:
+          <ol>
+            <li>
+              <b>🃏 Card: </b>This component represents each song displayed on the interface. I populated my cards using my own database file that contained all necessary information about each song.
+            </li>
+            <li>
+              <b>🔘 Buttons: </b>This component represents each pill-shaped button filter at the top of the page which allows the user to filter the selection of songs by year and song type.
+            </li>
+            <li>
+              <b>👤 Icons: </b>This component represents each individual artist icon button in the left sidebar which allows the user to only see songs by the artist of their choice. Icons can be used in combination with Buttons.
+            </li>
+          </ol>
+        </p>
+      </div>
+    </section>
+
+    <section id="flow">
+      <div class="sm-spacing">
+        <h3>Flow of Data</h3>
+        <p>
+          To briefly touch on the structure of my application, I called my Buttons component in my Nav class, which was then called in App. I called my Card component in App. I called my Icons component in by Sidebar class, which is called by App. The Sidebar class also displays the Home and Favorites button classes and Artist classes, which calls the Icons component.
+        </p>
+      </div>
+      <div class="sm-spacing">
+        <p>I passed down the following data through my components:</p>
+        <ol>
+          <li>
+            <b>songs: </b>This represented the array of songs in my database. I used this in App to populate my Cards with information and ensure that the filters applied would affect which cards were being displayed.
+          </li>
+          <li>
+            <b>onFavoriteClick: </b>This was a function I created in my Card component, which was called in my App class to keep track of when a card was favorited or unfavorited. It used the song url, as the unique identifier for each card.
+          </li>
+        </ol>
+      </div>  
+      <p>
+        I incorporated 3 types of filters and an favoriting aggregator. The user can filter by year, song type, and artist. The year and song type filters can be used in combination with each other, but users can only select one year and one song type together max - they cannot select multiple years together. The user filter the songs by artist and then filter by year and song type within that. Users can favorite any song card and view their liked songs by clicking on the Favorites button in the left sidebar. The Home button right above the Favorites button completely clear all the filters that have been applied.
+      </p>
+      <p>
+        Each button with the exception of the artist Icons and Home button is a toggle button, which allows the user to apply a filter with one click and remove the filter with another click.
+      </p>
+    </section>
+
+    <!-- <section id="flow">
+      <h3>Challenges</h3>
+      <p></p>
+    </section> -->
+
+    <section id="final">
+      <h3>Final Development</h3>
+      <img src="images/landing-page.png">
+      <button><a href="https://react-assignment-three-black.vercel.app/" target="_blank">See final website ↗</a></button>
+    </section>
+
+    <section id="takeaways">
+      <div class="sm-spacing">
+        <h3>Takeaways</h3>
+        <p>
+          This was a very challenging project given my lack of background in React, but I had a lot of fun creating this music filtering app. I learned a lot about useStates, components, props, and how to abstract and better organize my code.
+        </p>
+      </div>
+      <p>
+        I had initially added useStates for my pill buttons so that the user would at least know which filters they applied, however these visual indicators were removed as soon as I added functionality and I was unable to figure out how to combine both. In my next projects, I hope to not compromise usability for functionality.
+      </p>
+      <p>
+        If I had more time and a deeper understanding of React and JavaScript principles, I would add a clear filters button that simply clears all the filters applied on the page. For example, if an artist Icon is clicked and a year and/or song type filter was applied, the clear filters button should remove the year and song type filters and only display all the songs by that artist.
+      </p>
+      <p>
+        Although there are many bugs in this app, I'm satisfied with the work I was able to accomplis within the given timeframe.
+      </p>
+    </section>
+  </div>
+</body>
+</html>
